@@ -2,7 +2,7 @@
 :root {
   --color-primary: #f6d2b8;
   --color-secondary: #e5975f;
-  --color-accent: #beb45a;
+  --color-accent: #7f7732;
   --color-bg-light: #a8d5d8;
   --color-bg-dark: #d8d3a8;
   --color-text: #000;
@@ -14,6 +14,10 @@ body {
   margin: auto;
   font-family: 'Inter', sans-serif;
   font-style: normal;
+}
+
+#header h2 {
+  display: none;
 }
 
 .top-header {
