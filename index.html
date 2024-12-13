@@ -10,32 +10,13 @@
 	<meta name="author" content="Nina Carducci">
 	<title>Nina Carducci - Photographe</title>
 
-	<!-- SEO et Référencement local avec Schema.org -->
-	<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Photographer",
-      "name": "Nina Carducci",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "68 avenue Alsace-Lorraine",
-        "addressLocality": "Bordeaux",
-        "postalCode": "33200",
-        "addressCountry": "FR"
-      },
-      "telephone": "+33 5 56 67 78 89",
-      "openingHours": "Mo-Fr 10:00-19:00",
-      "sameAs": "https://www.instagram.com/ninacarducci.photo/?hl=fr"
-    }
-    </script>
-
 	<!-- Métas pour les réseaux sociaux -->
 	<!-- Facebook Open Graph -->
 	<meta property="og:title" content="Nina Carducci - Photographe">
 	<meta property="og:description"
 		content="Photographe professionnelle, Nina Carducci capture des moments uniques à travers des photographies émotionnelles et artistiques.">
-	<meta property="og:image" content="URL_de_l'image_de_partage">
-	<meta property="og:url" content="URL_de_votre_site">
+	<meta property="og:image" content="./assets/images/nina.webp">
+	<meta property="og:url" content="https://nina-carducci.github.io/">
 	<meta property="og:type" content="website">
 	<meta property="og:locale" content="fr_FR">
 
@@ -44,8 +25,8 @@
 	<meta name="twitter:title" content="Nina Carducci - Photographe">
 	<meta name="twitter:description"
 		content="Photographe professionnelle, Nina Carducci capture des moments uniques à travers des photographies émotionnelles et artistiques.">
-	<meta name="twitter:image" content="URL_de_l'image_de_partage">
-	<meta name="twitter:url" content="URL_de_votre_site">
+	<meta name="twitter:image" content="./assets/images/nina.webp">
+	<meta name="twitter:url" content="@nina_carducci">
 
 	<!-- Liens CSS -->
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
@@ -57,11 +38,11 @@
 		rel="stylesheet">
 
 	<!-- Scripts -->
-	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./assets/maugallery.js"></script>
-	<script src="./assets/scripts.js"></script>
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
+	<script src="./assets/maugallery.js" defer></script>
+	<script src="./assets/scripts.js" defer></script>
 </head>
 
 <body>
@@ -122,8 +103,7 @@
 
 		<section id="about">
 			<div class="picture left">
-				<img src="./assets/images/nina.webp" alt="Photographie de Nina Carducci"
-					aria-describedby="about-me-description">
+				<img src="./assets/images/nina.webp" alt="Photographie de Nina Carducci">
 			</div>
 			<div id="about-me">
 				<h2 class="about-me__title">À propos de moi</h2>
@@ -176,6 +156,27 @@
 
 		<section id="contact">
 			<h2>Contact</h2>
+			<!-- Microdonnées LocalBusiness -->
+			<div class="contact-info" itemscope itemtype="http://schema.org/LocalBusiness">
+				<meta itemprop="name" content="Nina Carducci" />
+				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<meta itemprop="streetAddress" content="68 avenue Alsace-Lorraine" />
+					<meta itemprop="addressLocality" content="Bordeaux" />
+					<meta itemprop="postalCode" content="33200" />
+					<meta itemprop="addressCountry" content="FR" />
+				</div>
+				<meta itemprop="telephone" content="05 56 67 78 89" />
+				<div itemprop="openingHoursSpecification" itemscope
+					itemtype="http://schema.org/OpeningHoursSpecification">
+					<meta itemprop="dayOfWeek" content="Monday" />
+					<meta itemprop="dayOfWeek" content="Tuesday" />
+					<meta itemprop="dayOfWeek" content="Wednesday" />
+					<meta itemprop="dayOfWeek" content="Thursday" />
+					<meta itemprop="dayOfWeek" content="Friday" />
+					<meta itemprop="opens" content="10:00" />
+					<meta itemprop="closes" content="19:00" />
+				</div>
+			</div>
 			<form action="/submit_form" method="post"> <!-- Correction de l'attribut action -->
 				<label for="nom">Nom</label>
 				<input type="text" name="nom" id="nom" aria-label="Nom" required>
